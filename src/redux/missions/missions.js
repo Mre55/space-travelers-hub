@@ -1,8 +1,14 @@
 // *Constants
-const FETCH = 'FETCH';
+// const FETCH = 'FETCH';
 const STORE = 'STORE';
 
 // *Actions
+// Store data
+const storeMissions = (payload) => ({
+  type: STORE,
+  payload,
+});
+
 // Fetch data from API
 export const fetchingData = () => async (dispatch) => {
   const data = await fetch('https://api.spacexdata.com/v3/missions', {
@@ -16,27 +22,17 @@ export const fetchingData = () => async (dispatch) => {
   }
 };
 
-// Store data
-const storeMissions = (payload) => {
-  return {
-    type: STORE,
-    payload,
-  };
-};
-
 // *Reducer function
 const missionsReducer = (state = [], payload) => {
   switch (payload.type) {
     case STORE:
       return [
-        payload.payload.map((mission) => {
-          return {
-            title: mission.mission_name,
-            description: mission.description,
-            id: mission.mission_id,
-            reserved: false,
-          };
-        }),
+        payload.payload.map((mission) => ({
+          title: mission.mission_name,
+          description: mission.description,
+          id: mission.mission_id,
+          reserved: false,
+        })),
       ];
     default:
       return state;
