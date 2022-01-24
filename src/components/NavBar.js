@@ -23,7 +23,8 @@ const NavBar = () => {
         </NavLink>
         <NavLink
           className={(isActive) => activeClass(isActive)}
-          to="/my-profile">
+          to="/my-profile"
+        >
           My Profile
         </NavLink>
       </div>
