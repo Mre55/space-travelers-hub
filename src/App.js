@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
-import store from './redux/configureStore';
+import store from './redux/storeConfig';
 
 const App = () => (
   <Provider store={store}>
