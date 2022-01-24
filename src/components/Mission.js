@@ -13,7 +13,7 @@ const Mission = (props) => {
         <div>{member ? 'Active member' : 'Not a member'}</div>
       </div>
       <div>
-        <button>Join</button>
+        <button type="button">Join</button>
       </div>
     </div>
   );

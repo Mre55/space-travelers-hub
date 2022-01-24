@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 } from 'uuid';
 import Mission from './Mission';
 
 const Missions = () => {
@@ -37,8 +38,8 @@ const Missions = () => {
           <div>Status</div>
           <div>Action</div>
         </div>
-        {missions.map((mission, index) => (
-          <Mission key={index} mission={mission} />
+        {missions.map((mission) => (
+          <Mission key={v4()} mission={mission} />
         ))}
       </div>
     </div>
