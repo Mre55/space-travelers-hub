@@ -16,17 +16,19 @@ const Missions = () => {
   const missionsData = useSelector((state) => state.missionsReducer);
 
   return (
-    <div>
-      <div className="grid">
-        <div className="grid grid-cols-4">
-          <div>Mission</div>
-          <div>Description</div>
-          <div>Status</div>
-          <div>Action</div>
+    <div className="p-10">
+      <div>
+        <div className="grid grid-cols-12 border border-black auto-cols-min font-bold text-xl">
+          <div className="p-2 border-r-black col-span-2 border-r">Mission</div>
+          <div className="p-2 border-r-black col-span-6 border-r">
+            Description
+          </div>
+          <div className="p-2 border-r-black col-span-2 border-r">Status</div>
+          <div className="p-2 col-span-2">Action</div>
         </div>
         {missionsData[0] &&
-          missionsData[0].map((mission) => (
-            <Mission key={mission.id} mission={mission} />
+          missionsData[0].map((mission, index) => (
+            <Mission key={mission.id} mission={mission} index={index} />
           ))}
       </div>
     </div>
