@@ -27,8 +27,8 @@ const rocketsReducer = (state = [], action) => {
     case FETCH_ROCKET:
       return [
         action.payload.map((rocket) => ({
-          flickr_images: rocket.flickr_images[0],
-          rocket_name: rocket.rocket_name,
+          flickrImages: rocket.flickr_images[0],
+          rocketName: rocket.rocket_name,
           description: rocket.description,
           id: rocket.rocket_id,
           reserved: false,

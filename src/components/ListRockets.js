@@ -4,18 +4,17 @@ import { PropTypes } from 'prop-types';
 const ListRockets = (props) => {
   const {
     rocket: {
-      /* eslint-disable camelcase */
-      flickr_images, rocket_name, description, reserve,
+      flickrImages, rocketName, description, reserve,
     },
   } = props;
 
   return (
     <div>
       <div className="flex space-x-10">
-        <div><img className="flex-none w-80" src={flickr_images} alt="Rocket" /></div>
+        <div><img className="flex-none w-80" src={flickrImages} alt="Rocket" /></div>
         <div className="flex-none flex flex-col space-y-4 w-8/12">
           <div>
-            <div className="text-3xl">{rocket_name}</div>
+            <div className="text-3xl">{rocketName}</div>
           </div>
           <div>
             <div className="bg-emerald-400 text-xs text-white p-2 rounded w-24">{reserve ? 'Reserved' : 'Not reserved'}</div>
