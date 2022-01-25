@@ -6,10 +6,6 @@ const Mission = (props) => {
     mission: { title, description, id, reserved },
   } = props;
 
-  Mission.propTypes = {
-    mission: PropTypes.instanceOf(Object).isRequired,
-  };
-
   return (
     <div className="grid grid-cols-4">
       <div>{title}</div>
@@ -22,6 +18,10 @@ const Mission = (props) => {
       </div>
     </div>
   );
+};
+
+Mission.propTypes = {
+  mission: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Mission;
