@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 
 const Mission = (props) => {
   const {
-    mission: { title, description, id, reserved },
+    mission: { title, description, reserved },
     index,
   } = props;
 
   return (
     <div
-      className={
-        'grid grid-cols-12 border border-t-0 border-black' +
-        (index % 2 === 0 ? ' bg-neutral-200' : '')
-      }>
+      className={`grid grid-cols-12 border border-t-0 border-black${
+        index % 2 === 0 ? ' bg-neutral-200' : ''
+      }`}
+    >
       <div className="border-r border-r-black p-2 text-xl font-bold col-span-2">
         {title}
       </div>
@@ -34,13 +34,15 @@ const Mission = (props) => {
         {reserved ? (
           <button
             className="border rounded-md px-4 py-2 text-red-500 border-red-500"
-            type="button">
+            type="button"
+          >
             Leave Mission
           </button>
         ) : (
           <button
             className="border rounded-md px-4 py-2 border-black"
-            type="button">
+            type="button"
+          >
             Join Mission
           </button>
         )}
@@ -51,6 +53,7 @@ const Mission = (props) => {
 
 Mission.propTypes = {
   mission: PropTypes.instanceOf(Object).isRequired,
+  index: PropTypes.number.isRequired,
 };
 
 export default Mission;
