@@ -11,6 +11,14 @@ const Mission = (props) => {
 
   const dispatch = useDispatch();
 
+  const handleReservation = () => {
+    if (reserved) {
+      dispatch(leaveMission(id));
+    } else {
+      dispatch(joinMission(id));
+    }
+  };
+
   return (
     <div
       className={`grid grid-cols-12 border border-t-0 border-black${
@@ -23,32 +31,24 @@ const Mission = (props) => {
         {description}
       </div>
       <div className="border-r border-r-black p-2 col-span-2 grid place-content-center">
-        {reserved ? (
-          <div className="border rounded-md px-2 py-1 text-white">
-            Active member
-          </div>
-        ) : (
-          <div className="border rounded-md px-2 py-1 text-white bg-neutral-600 uppercase">
-            Not a member
-          </div>
-        )}
+        <div
+          className={
+            'border rounded-md px-2 py-1 text-white' +
+            (reserved ? ' bg-cyan-600' : ' bg-neutral-600 uppercase')
+          }>
+          {reserved ? 'Active member' : 'Not a member'}
+        </div>
       </div>
       <div className="grid p-2 col-span-2 place-content-center">
-        {reserved ? (
-          <button
-            className="border rounded-md px-4 py-2 text-red-500 border-red-500"
-            type="button"
-            onClick={() => dispatch(leaveMission(id))}>
-            Leave Mission
-          </button>
-        ) : (
-          <button
-            className="border rounded-md px-4 py-2 border-black"
-            type="button"
-            onClick={() => dispatch(joinMission(id))}>
-            Join Mission
-          </button>
-        )}
+        <button
+          className={
+            'border rounded-md px-4 py-2' +
+            (reserved ? ' text-red-500 border-red-500' : ' border-black')
+          }
+          onClick={handleReservation}
+          type="button">
+          {reserved ? 'Leave Mission' : 'Join Mission'}
+        </button>
       </div>
     </div>
   );
