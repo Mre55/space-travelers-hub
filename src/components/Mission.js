@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Mission = (props) => {
   const {
-    mission: { title, description, member },
+    mission: { title, description, id, reserved },
   } = props;
 
   Mission.propTypes = {
@@ -15,7 +15,7 @@ const Mission = (props) => {
       <div>{title}</div>
       <div>{description}</div>
       <div>
-        <div>{member ? 'Active member' : 'Not a member'}</div>
+        <div>{reserved ? 'Active member' : 'Not a member'}</div>
       </div>
       <div>
         <button type="button">Join</button>
