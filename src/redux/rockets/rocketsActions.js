@@ -1,23 +1,26 @@
+import axios from 'axios';
 // *Constants
 
-export const FETCH_ROCKETS = 'FETCH_ROCKETS';
+// export const FETCH_ROCKETS = 'FETCH_ROCKETS';
 
 // *Actions
-export const fetchRocketSuccess = (payload) => ({
-    type: FETCH_BOOKS,
+
+// // import { FETCH_ROCKETS } from './rocketsActions';
+
+// // Fetch data from API
+
+export function fetchRocketSuccess(payload) {
+  return {
+    type: 'FETCH_ROCKETS',
     payload,
-  });
+  };
+}
 
-// Fetch data from API
-export const fetchRockets = () => async (dispatch) => {
-  const rocketData = await fetch('https://api.spacexdata.com/v3/rockets', {
-    method: 'GET',
+export function fetchRockets() {
+  return (dispatch) => axios.get('https://api.spacexdata.com/v3/missions').then((response) => {
+    //   const books = response.data;
+    dispatch(fetchRocketSuccess(response.data));
+    // console.log('books from API is ', books)
+    //   return books
   });
-  try {
-    const rockets = await rocketData.json();
-    dispatch(storeMissions(rockets));
-  } catch (error) {
-    console.error(error);
-  }
-};
-
+}
