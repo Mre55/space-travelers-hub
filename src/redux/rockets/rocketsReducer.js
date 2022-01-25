@@ -1,10 +1,16 @@
 // *Constants
 const FETCH_ROCKET = 'FETCH_ROCKET';
+const RESERVE_ROCKET = 'RESERVE_ROCKET';
 
 // *Actions
 // Store data
 const storerockets = (payload) => ({
   type: FETCH_ROCKET,
+  payload,
+});
+
+export const reserveRocket = (payload) => ({
+  type: RESERVE_ROCKET,
   payload,
 });
 
@@ -31,9 +37,15 @@ const rocketsReducer = (state = [], action) => {
           rocketName: rocket.rocket_name,
           description: rocket.description,
           id: rocket.rocket_id,
-          reserved: false,
+          reserve: false,
         })),
       ][0];
+    case RESERVE_ROCKET:
+        return [
+          state[0].map((rocket) =>
+            rocket.rocket_id == action.payload ? { ...rocket, reserve: true } : rocket
+          ),
+        ];
     default:
       return state;
   }

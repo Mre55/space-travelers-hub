@@ -1,12 +1,23 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../redux/rockets/rocketsReducer';
 
 const ListRockets = (props) => {
   const {
     rocket: {
-      flickrImages, rocketName, description, reserve,
+      flickrImages, rocketName, description, reserve, id,
     },
   } = props;
+
+  const dispatch = useDispatch();
+
+  const handleReservation = () => {
+    if (reserve) {
+      dispatch(reserveRocket(id));
+    }
+    console.log('reserve button is clicked and reserve is ', reserve);
+  };
 
   return (
     <div>
@@ -21,7 +32,13 @@ const ListRockets = (props) => {
           </div>
           <div>{description}</div>
           <div>
-            <button className="bg-blue-600 text-white p-3 rounded" type="button">Reserve Rocket</button>
+            <button
+              onClick={handleReservation}
+              className="bg-blue-600 text-white p-3 rounded"
+              type="button"
+            >
+              {reserve ? 'Cancel Reservation' : 'Reserve Rocket'}
+            </button>
           </div>
         </div>
       </div>
