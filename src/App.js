@@ -15,8 +15,6 @@ const App = () => (
         <Route path="/my-profile" element={<MyProfile />} />
       </Routes>
     </div>
-    {/* <Missions />
-    <Rockets /> */}
   </div>
 );
 
