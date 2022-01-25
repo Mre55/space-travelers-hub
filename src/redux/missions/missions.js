@@ -42,7 +42,6 @@ export const fetchingData = () => async (dispatch) => {
 const missionsReducer = (state = [], action) => {
   switch (action.type) {
     case STORE:
-      console.log(action.payload);
       return [
         action.payload.map((mission) => ({
           title: mission.mission_name,
@@ -53,19 +52,15 @@ const missionsReducer = (state = [], action) => {
       ];
     case JOIN_MISSION:
       return [
-        state[0].map((mission) =>
-          mission.id === action.payload
-            ? { ...mission, reserved: true }
-            : mission,
-        ),
+        state[0].map((mission) => (mission.id === action.payload
+          ? { ...mission, reserved: true }
+          : mission)),
       ];
     case LEAVE_MISSION:
       return [
-        state[0].map((mission) =>
-          mission.id === action.payload
-            ? { ...mission, reserved: false }
-            : mission,
-        ),
+        state[0].map((mission) => (mission.id === action.payload
+          ? { ...mission, reserved: false }
+          : mission)),
       ];
     default:
       return state;
