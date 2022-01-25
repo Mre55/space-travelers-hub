@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { joinMission, leaveMission } from '../redux/missions/missions';
 
 const Mission = (props) => {
   const {
-    mission: { title, description, reserved },
+    mission: { title, description, id, reserved },
     index,
   } = props;
+
+  const dispatch = useDispatch();
 
   return (
     <div
       className={`grid grid-cols-12 border border-t-0 border-black${
         index % 2 === 0 ? ' bg-neutral-200' : ''
-      }`}
-    >
+      }`}>
       <div className="border-r border-r-black p-2 text-xl font-bold col-span-2">
         {title}
       </div>
@@ -35,14 +38,14 @@ const Mission = (props) => {
           <button
             className="border rounded-md px-4 py-2 text-red-500 border-red-500"
             type="button"
-          >
+            onClick={() => dispatch(leaveMission(id))}>
             Leave Mission
           </button>
         ) : (
           <button
             className="border rounded-md px-4 py-2 border-black"
             type="button"
-          >
+            onClick={() => dispatch(joinMission(id))}>
             Join Mission
           </button>
         )}
