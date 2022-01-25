@@ -1,21 +1,24 @@
-import React from "react";
-import { PropTypes } from "prop-types";
+import React from 'react';
+import { PropTypes } from 'prop-types';
 
 const ListRockets = (props) => {
   const {
-    rocket: { flickr_images, rocket_name, description, reserve },
+    rocket: {
+      /* eslint-disable camelcase */
+      flickr_images, rocket_name, description, reserve,
+    },
   } = props;
 
   return (
     <div>
       <div className="flex space-x-10">
-        <div><img className="flex-none w-80" src={flickr_images} alt="Image" /></div>
+        <div><img className="flex-none w-80" src={flickr_images} alt="Rocket" /></div>
         <div className="flex-none flex flex-col space-y-4 w-8/12">
           <div>
             <div className="text-3xl">{rocket_name}</div>
           </div>
           <div>
-            <div className="bg-emerald-400 text-xs text-white p-2 rounded w-24">{reserve ? "Reserved" : "Not reserved"}</div>
+            <div className="bg-emerald-400 text-xs text-white p-2 rounded w-24">{reserve ? 'Reserved' : 'Not reserved'}</div>
           </div>
           <div>{description}</div>
           <div>

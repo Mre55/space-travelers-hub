@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { v4 } from "uuid";
-import ListRockets from "./ListRockets";
+import { v4 } from 'uuid';
+import ListRockets from './ListRockets';
 
-import { fetchingData } from "../redux/rockets/rocketsReducer";
-import store from "../redux/configureStore";
+import { fetchingData } from '../redux/rockets/rocketsReducer';
+import store from '../redux/configureStore';
 
 const Rockets = () => {
-
   const rocketsFromStore = useSelector((store) => store.rocketsReducer);
 
   const dispatch = useDispatch();
