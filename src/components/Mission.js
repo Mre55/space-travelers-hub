@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Mission = (props) => {
   const {
     mission: { title, description, member },
   } = props;
+
+  Mission.propTypes = {
+    mission: PropTypes.instanceOf(Object).isRequired,
+  };
 
   return (
     <div className="grid grid-cols-4">

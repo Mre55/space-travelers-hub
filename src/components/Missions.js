@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
+import store from '../redux/configureStore';
+import { fetchingData } from '../redux/missions/missions';
 import Mission from './Mission';
 
 const Missions = () => {
@@ -29,6 +32,15 @@ const Missions = () => {
       member: false,
     },
   ];
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!(store.getState().missionsReducer.length > 0)) {
+      dispatch(fetchingData());
+    }
+  }, []);
+
   return (
     <div>
       <div className="grid">
