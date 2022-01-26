@@ -35,8 +35,8 @@ const ListRockets = (props) => {
           </div>
           <div>
             {reserve ? (
-              <div>
-                <div className="bg-emerald-400 text-xs text-white p-2 m-1 rounded w-16">
+              <div className="gap-4">
+                <div className="bg-teal-600 text-sm text-white rounded mt-1 text-center mr-4 align-middle h-5 w-20 float-left">
                   Reserved
                 </div>
                 <div>{description}</div>
