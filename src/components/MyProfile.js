@@ -9,6 +9,8 @@ const MyProfile = () => {
   const rocketReserved = rocketsFromStore[0]
     && rocketsFromStore[0].filter((m) => m.reserve === true);
 
+  const missionsReserved = missions[0] && missions[0].filter((m) => m.reserved === true);
+
   return (
     <div className="p-10 grid grid-cols-2 gap-10">
       <div>
@@ -47,6 +49,7 @@ const MyProfile = () => {
             ))}
         </div>
       </div>
+      <div>Rockets</div>
     </div>
   );
 };
