@@ -1,16 +1,22 @@
 // *Constants
 const FETCH_ROCKET = 'FETCH_ROCKET';
 const RESERVE_ROCKET = 'RESERVE_ROCKET';
+const CANCEL_ROCKET = 'CANCEL_ROCKET';
 
 // *Actions
 // Store data
-const storerockets = (payload) => ({
+const storeRockets = (payload) => ({
   type: FETCH_ROCKET,
   payload,
 });
 
 export const reserveRocket = (payload) => ({
   type: RESERVE_ROCKET,
+  payload,
+});
+
+export const cancelReservation = (payload) => ({
+  type: CANCEL_ROCKET,
   payload,
 });
 
@@ -21,7 +27,7 @@ export const fetchingData = () => async (dispatch) => {
   });
   try {
     const rockets = await data.json();
-    dispatch(storerockets(rockets));
+    dispatch(storeRockets(rockets));
   } catch (error) {
     console.error(error);
   }
@@ -39,13 +45,17 @@ const rocketsReducer = (state = [], action) => {
           id: rocket.rocket_id,
           reserve: false,
         })),
-      ][0];
+      ];
     case RESERVE_ROCKET:
-        return [
-          state[0].map((rocket) =>
-            rocket.rocket_id == action.payload ? { ...rocket, reserve: true } : rocket
-          ),
-        ];
+      return [
+        state[0].map((rocket) => (rocket.id === action.payload
+          ? { ...rocket, reserve: true } : rocket)),
+      ];
+    case CANCEL_ROCKET:
+      return [
+        state[0].map((rocket) => (rocket.id === action.payload
+          ? { ...rocket, reserve: false } : rocket)),
+      ];
     default:
       return state;
   }

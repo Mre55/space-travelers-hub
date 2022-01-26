@@ -8,7 +8,7 @@ import { fetchingData } from '../redux/rockets/rocketsReducer';
 import store from '../redux/configureStore';
 
 const Rockets = () => {
-  const rocketsFromStore = useSelector((store) => store.rocketsReducer);
+  const rocketsFromStore = useSelector((state) => state.rocketsReducer);
 
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ const Rockets = () => {
   return (
     <div>
       <div className="grid m-12">
-        {rocketsFromStore.map((rocket) => (
+        {rocketsFromStore[0] && rocketsFromStore[0].map((rocket) => (
           <ListRockets key={v4()} rocket={rocket} />
         ))}
       </div>
