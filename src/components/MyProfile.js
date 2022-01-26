@@ -5,11 +5,9 @@ const MyProfile = () => {
   const missions = useSelector((state) => state.missionsReducer);
   const rocketsFromStore = useSelector((state) => state.rocketsReducer);
 
-  const missionsReserved =
-    missions[0] && missions[0].filter((m) => m.reserved === true);
-  const rocketReserved =
-    rocketsFromStore[0] &&
-    rocketsFromStore[0].filter((m) => m.reserve === true);
+  const missionsReserved = missions[0] && missions[0].filter((m) => m.reserved === true);
+  const rocketReserved = rocketsFromStore[0]
+    && rocketsFromStore[0].filter((m) => m.reserve === true);
 
   return (
     <div className="p-10 grid grid-cols-2 gap-10">
@@ -18,12 +16,14 @@ const MyProfile = () => {
         <div
           className={`flex flex-col border border-b-0 rounded-t-lg border-black ${
             missionsReserved ? '' : 'hidden'
-          }`}>
-          {missionsReserved &&
-            missionsReserved.map((mission) => (
+          }`}
+        >
+          {missionsReserved
+            && missionsReserved.map((mission) => (
               <div
                 className="border-b px-4 py-2 text-xl border-black"
-                key={mission.id}>
+                key={mission.id}
+              >
                 {mission.title}
               </div>
             ))}
@@ -34,12 +34,14 @@ const MyProfile = () => {
         <div
           className={`flex flex-col border border-b-0 border-black rounded-t-lg ${
             rocketReserved ? '' : 'hidden'
-          }`}>
-          {rocketReserved &&
-            rocketReserved.map((rocket) => (
+          }`}
+        >
+          {rocketReserved
+            && rocketReserved.map((rocket) => (
               <div
                 className="border-b px-4 py-2 text-xl border-black"
-                key={rocket.id}>
+                key={rocket.id}
+              >
                 {rocket.rocketName}
               </div>
             ))}
