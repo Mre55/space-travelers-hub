@@ -15,7 +15,7 @@ const NavBar = () => {
     <div className="flex justify-between items-center shadow-md px-4 py-2">
       <div className="flex items-center gap-4">
         <img className="w-14" src={logo} width={50} alt="Logo" />
-        <h1 className="text-3xl">Space Travelers' HUB</h1>
+        <h1 className="text-3xl">Space Travelers&apos; HUB</h1>
       </div>
       <div className="flex items-center gap-4">
         <div className="flex border-r-2 border-black">
@@ -24,14 +24,16 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             className={(isActive) => activeClass(isActive)}
-            to="/missions">
+            to="/missions"
+          >
             Missions
           </NavLink>
         </div>
 
         <NavLink
           className={(isActive) => activeClass(isActive)}
-          to="/my-profile">
+          to="/my-profile"
+        >
           My Profile
         </NavLink>
       </div>
