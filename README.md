@@ -12,21 +12,31 @@ Welcome to Space Traveler's HUB, in this web app you will be able to take a fict
 
 #### This is the home page, where you can see and interact with the available rockets
 
-![homepage-screen](./screenshots/rockets-screen.png)
+![homepage-screen](./screenshots/rockets-desktop.png)
 
 #### This is the missions page, where you can join and read about the available missions
 
-![mission-screen](./screenshots/missions-screen.png)
+![mission-screen](./screenshots/missions-desktop.png)
 
 #### Finally, this interface will help you to keep track of the rockets and mission you joined
 
-![myProfile-screen](./screenshots/myProfile-screen.png)
+![myProfile-screen](./screenshots/myProfile-desktop.png)
 
-<!-- Include some screenshots of desktop version -->
+### 📱 Mobile version
 
-<!-- ### 📱 Mobile version -->
+Here you can take a look at the different pages for the mobile version
 
-<!-- Include some screenshots of mobile version -->
+#### Home Page
+
+![homepage-screen](./screenshots/rockets-mobile.png)
+
+#### Missions Page
+
+![mission-screen](./screenshots/missions-mobile.png)
+
+#### My Profile Page
+
+![myProfile-screen](./screenshots/myProfile-mobile.png)
 
 ## ✅ Learning objectives
 
@@ -75,7 +85,7 @@ If you want to see a live demo of this project, [click here](https://react-space
 
 ## Authors
 
-👤 _Mihreteab Misganaw Aride_
+👤 **Mihreteab Misganaw Aride**
 
 - GitHub: [@Mre55](https://github.com/Mre55)
 - Twitter: [@MreMisganaw](https://twitter.com/MreMisganaw)
