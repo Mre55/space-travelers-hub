@@ -6,8 +6,8 @@ import {
   cancelReservation,
 } from '../../redux/rockets/rocketsReducer';
 
-const ListRockets = () => {
-
+const ListRockets = (props) => {
+  const { rocket, id, reserve } = props;
   const dispatch = useDispatch();
 
   const handleReservation = () => {
@@ -26,36 +26,36 @@ const ListRockets = () => {
         </div>
         <div className="flex-none flex flex-col space-y-4 w-8/12">
           <div>
-            <div className="text-3xl"></div>
+            <div className="text-3xl" />
           </div>
           <div>
-            
-              <div className="gap-4">
-                <div className="bg-teal-600 text-sm text-white rounded mt-1 text-center mr-4 align-middle h-5 w-20 float-left">
-                  Reserved
-                </div>
-                <div>description</div>
+
+            <div className="gap-4">
+              <div className="bg-teal-600 text-sm text-white rounded mt-1 text-center mr-4 align-middle h-5 w-20 float-left">
+                Reserved
               </div>
+              <div>description</div>
+            </div>
             ) : (
-              description
+            description
             )
           </div>
           <div>
-              <button
-                onClick={handleReservation}
-                className="bg-inherit border-solid border-2 text-lg text-gray-500 border-gray-400 p-2 rounded"
-                type="button"
-              >
-                Cancel Reservation
-              </button>
+            <button
+              onClick={handleReservation}
+              className="bg-inherit border-solid border-2 text-lg text-gray-500 border-gray-400 p-2 rounded"
+              type="button"
+            >
+              Cancel Reservation
+            </button>
             ) : (
-              <button
-                onClick={handleReservation}
-                className="bg-blue-600 text-white p-2 w-40 text-lg  rounded"
-                type="button"
-              >
-                Reserve Rocket
-              </button>
+            <button
+              onClick={handleReservation}
+              className="bg-blue-600 text-white p-2 w-40 text-lg  rounded"
+              type="button"
+            >
+              {rocket}
+            </button>
             )
           </div>
         </div>
@@ -63,10 +63,12 @@ const ListRockets = () => {
       <br />
     </div>
   );
-}
+};
 
 ListRockets.propTypes = {
   rocket: PropTypes.instanceOf(Object).isRequired,
+  id: PropTypes.string.isRequired,
+  reserve: PropTypes.bool.isRequired,
 };
 
 export default ListRockets;

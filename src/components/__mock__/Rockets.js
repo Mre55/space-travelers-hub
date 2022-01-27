@@ -21,9 +21,7 @@ const Rockets = () => {
   return (
     <div>
       <div className="grid m-12">
-        {
-          <ListRockets key={v4()}  />
-        }
+        <ListRockets key={v4()} rocketsFromStore={rocketsFromStore} />
       </div>
     </div>
   );

@@ -51,9 +51,7 @@ exports[`AddTodo snapshot tests renders correctly 1`] = `
               className="bg-blue-600 text-white p-2 w-40 text-lg  rounded"
               onClick={[Function]}
               type="button"
-            >
-              Reserve Rocket
-            </button>
+            />
             )
           </div>
         </div>
