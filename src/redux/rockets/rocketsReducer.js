@@ -5,7 +5,7 @@ const CANCEL_ROCKET = 'CANCEL_ROCKET';
 
 // *Actions
 // Store data
-const storeRockets = (payload) => ({
+export const storeRockets = (payload) => ({
   type: FETCH_ROCKET,
   payload,
 });
