@@ -28,15 +28,15 @@ Here you can take a look at the different pages for the mobile version
 
 #### Home Page
 
-![homepage-screen](./screenshots/rockets-mobile.png)
+<img src="./screenshots/rockets-mobile.png" alt="homepage-screen" width="450"/>
 
 #### Missions Page
 
-![mission-screen](./screenshots/missions-mobile.png)
+<img src="./screenshots/missions-mobile.png" alt="missions-screen" width="450"/>
 
 #### My Profile Page
 
-![myProfile-screen](./screenshots/myProfile-mobile.png)
+<img src="./screenshots/myProfile-mobile.png" alt="myProfile-screen" width="450"/>
 
 ## ✅ Learning objectives
 
