@@ -25,15 +25,15 @@ const ListRockets = (props) => {
 
   return (
     <div>
-      <div className="md:flex">
+      <div className="md:flex gap-8">
         <div className="flex justify-center">
           <img className="w-80 md:max-w-md" src={flickrImages} alt="Rocket" />
         </div>
-        <div className="flex flex-col items-center pt-7 md:items-start ml-8">
+        <div className="flex flex-col items-center pt-7 md:items-start">
           <div>
             <div className="text-3xl">{rocketName}</div>
           </div>
-          <div className="pt-3 pb-5 w-3/4 md:w-11/12">
+          <div className="pt-3 pb-5 w-4/5 md:w-11/12">
             {reserve ? (
               <div className="gap-4">
                 <div className="bg-teal-600 text-sm text-white rounded mt-1 text-center mr-4 align-middle h-5 w-20 float-left">
