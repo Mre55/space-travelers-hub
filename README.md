@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Space Traveler's HUB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Space Traveler's HUB, in this web app you will be able to take a fictional tour accross the space.
 
-## Available Scripts
+- You can choose a rocket from our catalog interface, and reserve ir for you.
+- Also, you can see information of the most famous recent spacial missions and join them.
+- Finally, in MyProfile interface you will be able to keep track of all your rockets and mission you are subscribed.
 
-In the project directory, you can run:
+![responsive-design](./screenshots/space-travelers-hub-preview.png)
 
-### `npm start`
+### 🖥️ Desktop version
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### This is the home page, where you can see and interact with the available rockets
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![homepage-screen](./screenshots/rockets-screen.png)
 
-### `npm test`
+#### This is the missions page, where you can join and read about the available missions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![mission-screen](./screenshots/missions-screen.png)
 
-### `npm run build`
+#### Finally, this interface will help you to keep track of the rockets and mission you joined
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![myProfile-screen](./screenshots/myProfile-screen.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Include some screenshots of desktop version -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- ### 📱 Mobile version -->
 
-### `npm run eject`
+<!-- Include some screenshots of mobile version -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ✅ Learning objectives
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Fetch data from a public API
+- Implement state management with react-redux
+- Render fetched data on screen
+- Implement a profile interface with user reserved missions and rockets
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧩 Built With
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React.js
+- React-router
+- Redux
+- TailwindCSS
+- Webpack
 
-## Learn More
+## 📚 Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To get a local copy up and running follow these simple example steps.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
 
-### Code Splitting
+For this project you don't need aditional tools
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- For this project to run you will need the following tools:
+- requisite -->
 
-### Analyzing the Bundle Size
+### Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Fork a copy to your repository
 
-### Making a Progressive Web App
+### Install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Clone the repository on your local enviroment and run `npm i` on your terminal
 
-### Advanced Configuration
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To start the dev server just run `npm start`.
+You can work in your favorite Code Editor
 
-### Deployment
+## 💻📱 Live Preview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- There is no Live Demo available at the moment -->
 
-### `npm run build` fails to minify
+If you want to see a live demo of this project, [click here](https://react-space-travelers-hub.herokuapp.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Authors
+
+👤 _Mihreteab Misganaw Aride_
+
+- GitHub: [@Mre55](https://github.com/Mre55)
+- Twitter: [@MreMisganaw](https://twitter.com/MreMisganaw)
+- LinkedIn: [@Mihreteab-Aride](https://www.linkedin.com/in/mihreteabaride/)
+
+👤 **William Morales**
+
+- GitHub: [@williamrolando88](https://github.com/williamrolando88)
+- Twitter: [@WillyMorales93](https://twitter.com/WillyMorales93)
+- LinkedIn: [William Morales](https://www.linkedin.com/in/william-morales-palma/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues).
+
+## 👏 Show your support
+
+Give a ⭐️ if you like this project!
+
+<!-- ## 👍 Credits -->
+
+<!--
+GUI & Graphic Design: Cindy Shin
+
+- Behance: [Cindy Shin](https://www.behance.net/adagio07)
+-->
+
+## 📝 License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2022 William Morales, Mihreteab Misganaw
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
