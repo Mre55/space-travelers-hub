@@ -1,10 +1,10 @@
 # Space Traveler's HUB
 
-Welcome to Space Traveler's HUB, in this web app you will be able to take a fictional tour accross the space.
+Welcome to Space Traveler's HUB, in this web app you will be able to take a fictional tour across space.
 
-- You can choose a rocket from our catalog interface, and reserve ir for you.
-- Also, you can see information of the most famous recent spacial missions and join them.
-- Finally, in MyProfile interface you will be able to keep track of all your rockets and mission you are subscribed.
+- You can choose a rocket from our catalog interface, and reserve it for you.
+- Also, you can see the information about the most famous recent special missions and join them.
+- Finally, in the MyProfile interface you will be able to keep track of all your rockets and mission you are subscribed to.
 
 ![responsive-design](./screenshots/space-travelers-hub-preview.png)
 
@@ -125,4 +125,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
