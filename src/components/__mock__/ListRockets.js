@@ -1,5 +1,4 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import {
   reserveRocket,
@@ -7,7 +6,9 @@ import {
 } from '../../redux/rockets/rocketsReducer';
 
 const ListRockets = (props) => {
+  /* eslint-disable react/prop-types */
   const { rocket, id, reserve } = props;
+
   const dispatch = useDispatch();
 
   const handleReservation = () => {
@@ -65,10 +66,10 @@ const ListRockets = (props) => {
   );
 };
 
-ListRockets.propTypes = {
-  rocket: PropTypes.instanceOf(Object).isRequired,
-  id: PropTypes.string.isRequired,
-  reserve: PropTypes.bool.isRequired,
-};
+// ListRockets.propTypes = {
+//   rocket: PropTypes.instanceOf(Object).isRequired,
+//   id: PropTypes.string.isRequired,
+//   reserve: PropTypes.bool.isRequired,
+// };
 
 export default ListRockets;
