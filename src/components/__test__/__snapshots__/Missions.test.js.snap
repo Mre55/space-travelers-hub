@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions component snapshot tests renders correctly 1`] = `
+<div>
+  <div
+    className="grid m-12"
+  >
+    <div>
+      <div
+        className="flex space-x-10"
+      >
+        <div>
+          <img
+            alt="Rocket"
+            className="flex-none w-80"
+          />
+        </div>
+        <div
+          className="flex-none flex flex-col space-y-4 w-8/12"
+        >
+          <div>
+            <div
+              className="text-3xl"
+            />
+          </div>
+          <div>
+            <div
+              className="gap-4"
+            >
+              <div
+                className="bg-teal-600 text-sm text-white rounded mt-1 text-center mr-4 align-middle h-5 w-20 float-left"
+              >
+                Reserved
+              </div>
+              <div>
+                description
+              </div>
+            </div>
+            ) : ( description )
+          </div>
+          <div>
+            <button
+              className="bg-inherit border-solid border-2 text-lg text-gray-500 border-gray-400 p-2 rounded"
+              onClick={[Function]}
+              type="button"
+            >
+              Cancel Reservation
+            </button>
+            ) : (
+            <button
+              className="bg-blue-600 text-white p-2 w-40 text-lg  rounded"
+              onClick={[Function]}
+              type="button"
+            />
+            )
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
+`;
