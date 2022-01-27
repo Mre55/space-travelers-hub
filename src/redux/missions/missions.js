@@ -6,7 +6,7 @@ const LEAVE_MISSION = 'LEAVE_MISSION';
 
 // *Actions
 // Store data
-const storeMissions = (payload) => ({
+export const storeMissions = (payload) => ({
   type: STORE,
   payload,
 });
