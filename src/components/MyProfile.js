@@ -14,7 +14,7 @@ const MyProfile = () => {
       <div>
         <h2 className="text-3xl font-semibold px-4 py-2">My Missions</h2>
         <div
-          className={`flex flex-col border border-b-0 border-black ${
+          className={`flex flex-col border border-b-0 rounded-t-lg border-black ${
             missionsReserved ? '' : 'hidden'
           }`}
         >
@@ -32,14 +32,14 @@ const MyProfile = () => {
       <div>
         <h2 className="text-3xl font-semibold py-2">My Rockets</h2>
         <div
-          className={`flex flex-col border border-b-0 text-gray-600 border-gray-400 rounded-t-lg ${
+          className={`flex flex-col border border-b-0 border-black rounded-t-lg ${
             rocketReserved ? '' : 'hidden'
           }`}
         >
           {rocketReserved
             && rocketReserved.map((rocket) => (
               <div
-                className="border-b px-4 py-2 text-xl border-gray-400"
+                className="border-b px-4 py-2 text-xl border-black"
                 key={rocket.id}
               >
                 {rocket.rocketName}
