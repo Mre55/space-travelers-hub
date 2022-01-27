@@ -2,7 +2,7 @@
 
 Welcome to Space Traveler's HUB, in this web app you will be able to take a fictional tour accross the space.
 
-- You can choose a rocket from our catalog interface, and reserve ir for you.
+- You can choose a rocket from our catalog interface, and reserve it for you.
 - Also, you can see information of the most famous recent spacial missions and join them.
 - Finally, in MyProfile interface you will be able to keep track of all your rockets and mission you are subscribed.
 
