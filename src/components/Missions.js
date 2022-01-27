@@ -13,10 +13,17 @@ const Missions = () => {
     }
   }, []);
 
+  const isMobile = () => {
+    return window.innerWidth < 768;
+  };
+
   const missionsData = useSelector((state) => state.missionsReducer);
 
   return (
     <div className="p-10">
+      <h2 className="text-xl mb-6 md:text-4xl font-semibold font-serif uppercase">
+        AVailable Missions
+      </h2>
       <div className="hidden md:block">
         <div className="grid grid-cols-12 border border-black auto-cols-min font-bold text-xl">
           <div className="p-2 border-r-black col-span-2 border-r">Mission</div>
@@ -31,6 +38,14 @@ const Missions = () => {
             <Mission key={mission.id} mission={mission} index={index} />
           ))}
       </div>
+      {isMobile() && (
+        <div className="flex flex-col gap-6">
+          {missionsData[0] &&
+            missionsData[0].map((mission, index) => (
+              <Mission key={mission.id} mission={mission} index={index} />
+            ))}
+        </div>
+      )}
     </div>
   );
 };
