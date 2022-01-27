@@ -13,9 +13,7 @@ const Missions = () => {
     }
   }, []);
 
-  const isMobile = () => {
-    return window.innerWidth < 768;
-  };
+  const isMobile = () => window.innerWidth < 768;
 
   const missionsData = useSelector((state) => state.missionsReducer);
 
@@ -33,15 +31,15 @@ const Missions = () => {
           <div className="p-2 border-r-black col-span-2 border-r">Status</div>
           <div className="p-2 col-span-2">Action</div>
         </div>
-        {missionsData[0] &&
-          missionsData[0].map((mission, index) => (
+        {missionsData[0]
+          && missionsData[0].map((mission, index) => (
             <Mission key={mission.id} mission={mission} index={index} />
           ))}
       </div>
       {isMobile() && (
         <div className="flex flex-col gap-6">
-          {missionsData[0] &&
-            missionsData[0].map((mission, index) => (
+          {missionsData[0]
+            && missionsData[0].map((mission, index) => (
               <Mission key={mission.id} mission={mission} index={index} />
             ))}
         </div>

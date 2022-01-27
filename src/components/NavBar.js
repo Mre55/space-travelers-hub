@@ -4,8 +4,7 @@ import logo from '../assets/planet.png';
 
 const NavBar = () => {
   const activeClass = (isActive) => {
-    let staticClass =
-      'md:mr-4 text-blue-500 border border-b-0 rounded-t-lg px-4 py-2 md:p-0 md:border-0 hover:underline';
+    let staticClass = 'md:mr-4 text-blue-500 border border-b-0 rounded-t-lg px-4 py-2 md:p-0 md:border-0 hover:underline';
     if (isActive.isActive) {
       staticClass += ' underline';
     }
@@ -26,24 +25,25 @@ const NavBar = () => {
             </NavLink>
             <NavLink
               className={(isActive) => activeClass(isActive)}
-              to="/missions">
+              to="/missions"
+            >
               Missions
             </NavLink>
 
             <NavLink
               className={(isActive) => `${activeClass(isActive)} md:hidden`}
-              to="/my-profile">
+              to="/my-profile"
+            >
               My Profile
             </NavLink>
           </div>
 
           <NavLink
-            className={({ isActive }) =>
-              `text-blue-500 hover:underline hidden md:block ${
-                isActive ? ' underline' : ''
-              }`
-            }
-            to="/my-profile">
+            className={({ isActive }) => `text-blue-500 hover:underline hidden md:block ${
+              isActive ? ' underline' : ''
+            }`}
+            to="/my-profile"
+          >
             My Profile
           </NavLink>
         </div>
